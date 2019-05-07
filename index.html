@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Do Anything Page</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Germania+One|Josefin+Sans" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Jumbotron (title and subtitle) -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="jumbotron jumbotron-fluid">
+          <img id="img" src="images/my-favicon.png">
+          <h1 class="display-4" id="title">Do Anything Page</h1>
+          <p class="lead">DIY for Dummies</p>
+
+        </div>
+      </div>
+    </div>
+    <!-- Search bar -->
+    <div class="row">
+      <div class="col-lg-6">
+        <form>
+          <div class="form-group" id="searching-term">
+            <label for="search">I can Do It Myself:</label>
+            <input type="text" class="form-control" id="search" placeholder="Type here what you want to learn about...">
+          </div>
+          <button type="submit" class="btn btn-default btn-lg" id="searchBtn">Search</button>
+        </form>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4> Want to share this tutorial by email? Leave your contact here:</h4>
+              </div>
+              <div class="modal-body">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="name"><span class="glyphicon glyphicon-user"></span> Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email"><span class="glyphicon glyphicon-user"></span> Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="Enter your email">
+                  </div>
+                  <button type="submit" class="btn btn-default btn-success btn-block"><span
+                      class="glyphicon glyphicon-off"></span> Yah! I want to have it on my email!!!</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span
+                    class="glyphicon glyphicon-remove"></span> Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Search History Dropdown-->
+      <br>
+      <div class="col-lg-6">
+        <div id="search-history">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Search History
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <span class="dropdown-item"></span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Div for videos from youtube -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+
+            <h2 class="title-1"> <img class="logo" src="images/youtube-logo.png">DIY Tutorial Videos</h2>
+          </div>
+          <div class="panel-body" id="wellSection"> Here all videos will appear...</div>
+        </div>
+      </div>
+    </div>
+    <!-- Div for articles from reddit -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="title-1"> <img class="logo" src="images/reddit.png"> DIY Blogs</h2>
+          </div>
+          <div class="panel-body" id="reddit-holder"> See what the community is saying... </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Div for  yelp -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="title-1"><img class="logo" src="images/yelp-logo.png"> In Too Deep? </h2>
+            <h4 class="title-1">Find help on yelp!</h4>
+            <div class="row">
+              <div class="col-lg-4">
+                <form>
+                  <div class="form-group row">
+                    <label for="zipCodeInput" class="col-sm-2 col-form-label">Zip Code</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="zipCodeInput"
+                        placeholder="It will help us to find help around you...">
+                    </div>
+                  </div>
+              </div>
+              <div class="col-lg-7">
+                <button type="button" class="btn btn-secondary" id="zipBtn">Find Help!</button>
+              </div>
+              </form>
+            </div>
+          </div>
+          <div class="panel-body" id="yelp-holder">Hire someone close to you....</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p id="copyright">Copyright©</p>
+  </footer>
+
+
+
+</body>
+
+</html>
