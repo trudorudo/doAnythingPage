@@ -5,7 +5,6 @@ The app allows on the user site simply get the menu on their phone by scanning Q
 
 # Live version 
 [Live demo](https://jakal.herokuapp.com/)
-https://jakal.herokuapp.com/
 
 # Built With
 * materialize
